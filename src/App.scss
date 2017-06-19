@@ -1,0 +1,14 @@
+@import "styles/shared.scss";
+
+.App {
+  height: ($size-sm + $spacing*2)*3;
+  overflow: hidden;
+  margin: 50px auto 30px auto;
+  position: relative;
+  width: ($size-sm+$spacing*2)*3;
+
+  @media(min-width: 450px) {
+    height: ($size + $spacing*2)*3;
+    width: ($size + $spacing*2)*3;
+  }
+}
