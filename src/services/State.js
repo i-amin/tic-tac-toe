@@ -49,7 +49,7 @@ export class State {
         let b = this.board;
 
         // rows check
-        for (var i = 0; i <= 6; i = i + 3) {
+        for (let i = 0; i <= 6; i = i + 3) {
             if (b[i] !== "E" && b[i] === b[i + 1] && b[i + 1] === b[i + 2]) {
                 this.result = b[i] + "-won";
                 return true;
@@ -57,7 +57,7 @@ export class State {
         }
 
         // columns check
-        for (var i = 0; i <= 2; i++) {
+        for (let i = 0; i <= 2; i++) {
             if (b[i] !== "E" && b[i] === b[i + 3] && b[i + 3] === b[i + 6]) {
                 this.result = b[i] + "-won";
                 return true;
@@ -65,7 +65,7 @@ export class State {
         }
 
         // diagonals check
-        for (var i = 0, j = 4; i <= 2; i = i + 2, j = j - 2) {
+        for (let i = 0, j = 4; i <= 2; i = i + 2, j = j - 2) {
             if (b[i] !== "E" && b[i] === b[i + j] && b[i + j] === b[i + 2 * j]) {
                 this.result = b[i] + "-won";
                 return true;

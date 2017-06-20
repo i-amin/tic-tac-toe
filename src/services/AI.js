@@ -51,6 +51,7 @@ export class AI {
             else if (state.turn === "O" && newScore < stateScore) {
                 stateScore = newScore
             }
+            return nextState;
         });
 
         return stateScore;

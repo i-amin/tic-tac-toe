@@ -32,9 +32,9 @@ export class Game {
 
     static calcScore(state) {
         if (state.result !== "running") {
-            if (state.result == "X-won") {
+            if (state.result === "X-won") {
                 return 10 - state.AIMovesCount;
-            } else if (state.result == "O-won") {
+            } else if (state.result === "O-won") {
                 return -10 + state.AIMovesCount;
             } else {
                 return 0
