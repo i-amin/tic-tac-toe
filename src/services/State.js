@@ -76,7 +76,7 @@ export class State {
          * check for draw
          * */
         if (this.emptyCells().length === 0) {
-            this.result = "draw";
+            this.result = "Draw";
             return true;
         }
 
