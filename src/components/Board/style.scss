@@ -1,4 +1,45 @@
+@import "styles/shared.scss";
+
 .board {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  height: ($size-sm + $spacing*2)*3;
+  width: ($size-sm+$spacing*2)*3;
+  margin: 50px auto 30px auto;
+
+  @media(min-width: 450px) {
+    height: ($size + $spacing*2)*3;
+    width: ($size + $spacing*2)*3;
+  }
+}
+
+.result {
+  h1 {
+    color: lightslategrey;
+  }
+}
+
+.controls {
+  input[type=checkbox] {
+    display: none;
+
+    & + label:before {
+      font-family: FontAwesome;
+      display: inline-block;
+    }
+
+    & + label:before {
+      content: "\f096";
+    }
+    & + label:before {
+      letter-spacing: 10px;
+    }
+
+    &:checked + label:before {
+      content: "\f046";
+    }
+    &:checked + label:before {
+      letter-spacing: 5px;
+    }
+  }
 }

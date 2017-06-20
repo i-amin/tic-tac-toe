@@ -2,17 +2,17 @@ import React from 'react';
 import './style.css';
 
 
-export function Cell({mark, testClick}) {
+export function Cell({mark, selected, onClick}) {
 
-    function renderChar(c) {
-        return (
-            <div
-                onClick={testClick.bind(this)}
-                className="cell mark-o">
-            </div>
-        )
-    }
-
-    return renderChar(mark);
+    return (
+        <div
+            onClick={onClick}
+            className={
+                "cell "
+                + (selected ? "checked " : "")
+                + (mark === "X" ? "mark-x" : "mark-o")
+            }>
+        </div>
+    )
 }
 
